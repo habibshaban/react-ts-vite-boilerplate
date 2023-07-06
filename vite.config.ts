@@ -12,6 +12,12 @@ export default defineConfig({
     port: 3005,
     host: true,
   },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: ["src/vitest-setup.ts"],
+    css: true,
+  },
   plugins: [
     react(),
     Icons({ compiler: "jsx", jsx: "react" }),
